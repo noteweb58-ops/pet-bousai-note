@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-github-username.github.io/pet-bousai-note/sitemap.xml
+Sitemap: https://noteweb58-ops.github.io/pet-bousai-note-note/sitemap.xml

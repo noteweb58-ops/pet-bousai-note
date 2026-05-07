@@ -31,7 +31,7 @@
 
 1. `affiliate-config.js` の検索URLを自分のアフィリエイトリンクへ差し替える。
 2. `index.html` の広告表記、運営者情報、免責文、プライバシーポリシーを自分の運用に合わせる。
-3. `robots.txt` と `sitemap.xml` の `https://your-github-username.github.io/pet-bousai-note/` を公開URLへ差し替える。
+3. `robots.txt` と `sitemap.xml` の `https://noteweb58-ops.github.io/pet-bousai-note-note/` を公開URLへ差し替える。
 4. Search Consoleに登録する。
 
 ## 無料公開ルート
