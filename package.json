@@ -1,0 +1,10 @@
+{
+  "name": "pet-bousai-note",
+  "version": "1.0.0",
+  "private": true,
+  "description": "犬・猫・小動物の災害時備蓄量を計算できる無料ツールサイト",
+  "scripts": {
+    "check": "node tools/check-site.mjs && node --check app.js && node --check affiliate-config.js && node --check tools/check-site.mjs && node --check tools/configure-site.mjs && node --check tools/serve.mjs",
+    "serve": "node tools/serve.mjs 4173"
+  }
+}

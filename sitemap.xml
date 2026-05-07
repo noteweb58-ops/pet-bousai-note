@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://your-github-username.github.io/pet-bousai-note/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/dog.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/cat.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/multi-pet.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/affiliate-setup.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/publish-free.html</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://your-github-username.github.io/pet-bousai-note/operations.html</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
+</urlset>
