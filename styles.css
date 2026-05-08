@@ -434,6 +434,21 @@ select {
   color: var(--muted);
 }
 
+.feature-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 24px;
+}
+
+.feature-card p {
+  color: var(--muted);
+}
+
 .faq-list {
   display: grid;
   gap: 12px;
@@ -616,7 +631,8 @@ code {
   .product-grid,
   .article-grid,
   .process-list,
-  .buy-guide {
+  .buy-guide,
+  .feature-card {
     grid-template-columns: 1fr;
   }
 
