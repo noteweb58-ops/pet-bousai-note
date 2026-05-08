@@ -449,6 +449,10 @@ select {
   color: var(--muted);
 }
 
+.feature-card-spaced {
+  margin-top: 14px;
+}
+
 .faq-list {
   display: grid;
   gap: 12px;
