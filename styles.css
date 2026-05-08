@@ -378,8 +378,8 @@ select {
 
 .product-card {
   display: grid;
-  gap: 12px;
-  padding: 18px;
+  gap: 16px;
+  padding: 20px;
 }
 
 .product-icon {
@@ -400,7 +400,10 @@ select {
 }
 
 .product-links a {
-  min-height: 38px;
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   background: var(--green);
   color: #fff;
@@ -741,7 +744,7 @@ code {
   }
 
   .product-links {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .site-footer {
