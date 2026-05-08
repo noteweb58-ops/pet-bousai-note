@@ -210,6 +210,42 @@ function renderProducts() {
     .join("");
 }
 
+function renderResultProducts(data) {
+  const links = window.AFFILIATE_LINKS || {};
+  const toiletProduct = data.toiletStyle === "litter" ? "litter" : "sheets";
+  const resultProducts = ["petFood", "petWater", toiletProduct, "deodorant"];
+
+  $("result-shop-box").innerHTML = `
+    <h3>不足分を買い足す</h3>
+    <div class="result-shop-grid">
+      ${resultProducts
+        .map((id) => {
+          const product = products.find((item) => item.id === id);
+          const productLinks = links[id] || {};
+          const shopLinks = [
+            ["Amazon", productLinks.amazon],
+            ["楽天", productLinks.rakuten]
+          ].filter(([, url]) => Boolean(url));
+          if (!product || !shopLinks.length) return "";
+          return `
+            <div class="result-shop-item">
+              <strong>${product.name}</strong>
+              <div class="product-links">
+                ${shopLinks
+                  .map(
+                    ([label, url]) =>
+                      `<button class="product-link-button" type="button" data-url="${url}" aria-label="${product.name}を${label}で探す">${label}</button>`
+                  )
+                  .join("")}
+              </div>
+            </div>
+          `;
+        })
+        .join("")}
+    </div>
+  `;
+}
+
 document.addEventListener("click", (event) => {
   const button = event.target.closest(".product-link-button");
   if (!button) return;
@@ -222,6 +258,7 @@ function update() {
   const data = calculate();
   renderSummary(data);
   renderPriority(data);
+  renderResultProducts(data);
 }
 
 document.querySelectorAll("input, select").forEach((element) => {
