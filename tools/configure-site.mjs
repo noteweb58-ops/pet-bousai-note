@@ -20,7 +20,11 @@ if (!siteUrl && !email) {
 const replacements = [];
 if (siteUrl) {
   replacements.push([
-    /https:\/\/your-github-username\.github\.io\/pet-bousai/g,
+    /https:\/\/your-github-username\.github\.io\/pet-bousai-note/g,
+    siteUrl
+  ]);
+  replacements.push([
+    /https:\/\/noteweb58-ops\.github\.io\/pet-bousai-note(?:-note)?/g,
     siteUrl
   ]);
 }
