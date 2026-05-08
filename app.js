@@ -195,7 +195,6 @@ function renderProducts() {
           <div class="product-links" aria-label="${product.name}の購入リンク">
             <a href="${productLinks.amazon || "#"}" rel="sponsored nofollow noopener" target="_blank">Amazon</a>
             <a href="${productLinks.rakuten || "#"}" rel="sponsored nofollow noopener" target="_blank">楽天</a>
-            <a href="${productLinks.yahoo || "#"}" rel="sponsored nofollow noopener" target="_blank">Yahoo</a>
           </div>
         </article>
       `;
