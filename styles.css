@@ -415,6 +415,25 @@ select {
   padding: 20px;
 }
 
+.article-grid-secondary {
+  margin-top: 16px;
+}
+
+.buy-guide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 20px;
+  align-items: end;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  padding: 24px;
+}
+
+.buy-guide p {
+  color: var(--muted);
+}
+
 .faq-list {
   display: grid;
   gap: 12px;
@@ -596,7 +615,8 @@ code {
   .checklist-grid,
   .product-grid,
   .article-grid,
-  .process-list {
+  .process-list,
+  .buy-guide {
     grid-template-columns: 1fr;
   }
 
