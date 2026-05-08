@@ -185,6 +185,10 @@ function renderProducts() {
   $("product-grid").innerHTML = products
     .map((product) => {
       const productLinks = links[product.id] || {};
+      const shopLinks = [
+        ["Amazon", productLinks.amazon],
+        ["楽天", productLinks.rakuten]
+      ].filter(([, url]) => Boolean(url));
       return `
         <article class="product-card">
           <div class="product-icon" aria-hidden="true">${product.icon}</div>
@@ -193,14 +197,26 @@ function renderProducts() {
             <p>${product.description}</p>
           </div>
           <div class="product-links" aria-label="${product.name}の購入リンク">
-            <a href="${productLinks.amazon || "#"}" rel="sponsored nofollow noopener" target="_blank">Amazon</a>
-            <a href="${productLinks.rakuten || "#"}" rel="sponsored nofollow noopener" target="_blank">楽天</a>
+            ${shopLinks
+              .map(
+                ([label, url]) =>
+                  `<button class="product-link-button" type="button" data-url="${url}" aria-label="${product.name}を${label}で探す">${label}</button>`
+              )
+              .join("")}
           </div>
         </article>
       `;
     })
     .join("");
 }
+
+document.addEventListener("click", (event) => {
+  const button = event.target.closest(".product-link-button");
+  if (!button) return;
+  const url = button.dataset.url;
+  if (!url) return;
+  window.open(url, "_blank", "noopener");
+});
 
 function update() {
   const data = calculate();

@@ -399,11 +399,14 @@ select {
   gap: 8px;
 }
 
-.product-links a {
+.product-links a,
+.product-link-button {
   display: flex;
+  width: 100%;
   min-height: 46px;
   align-items: center;
   justify-content: center;
+  border: 0;
   border-radius: 8px;
   background: var(--green);
   color: #fff;
@@ -412,6 +415,8 @@ select {
   text-align: center;
   text-decoration: none;
   padding: 8px 6px;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .article-grid article {
