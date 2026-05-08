@@ -210,39 +210,11 @@ function renderProducts() {
     .join("");
 }
 
-function renderResultProducts(data) {
-  const links = window.AFFILIATE_LINKS || {};
-  const toiletProduct = data.toiletStyle === "litter" ? "litter" : "sheets";
-  const resultProducts = ["petFood", "petWater", toiletProduct, "deodorant"];
-
+function renderResultProducts() {
   $("result-shop-box").innerHTML = `
-    <h3>不足分を買い足す</h3>
-    <div class="result-shop-grid">
-      ${resultProducts
-        .map((id) => {
-          const product = products.find((item) => item.id === id);
-          const productLinks = links[id] || {};
-          const shopLinks = [
-            ["Amazon", productLinks.amazon],
-            ["楽天", productLinks.rakuten]
-          ].filter(([, url]) => Boolean(url));
-          if (!product || !shopLinks.length) return "";
-          return `
-            <div class="result-shop-item">
-              <strong>${product.name}</strong>
-              <div class="product-links">
-                ${shopLinks
-                  .map(
-                    ([label, url]) =>
-                      `<button class="product-link-button" type="button" data-url="${url}" aria-label="${product.name}を${label}で探す">${label}</button>`
-                  )
-                  .join("")}
-              </div>
-            </div>
-          `;
-        })
-        .join("")}
-    </div>
+    <h3>足りない用品を確認</h3>
+    <p>計算結果を見ながら、必要なカテゴリだけ下の購入候補リンクで確認できます。</p>
+    <a class="button dark result-shop-scroll" href="#products">不足分の購入はこちら</a>
   `;
 }
 
@@ -258,7 +230,7 @@ function update() {
   const data = calculate();
   renderSummary(data);
   renderPriority(data);
-  renderResultProducts(data);
+  renderResultProducts();
 }
 
 document.querySelectorAll("input, select").forEach((element) => {

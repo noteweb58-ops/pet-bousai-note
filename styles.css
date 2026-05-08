@@ -357,21 +357,17 @@ select {
 }
 
 .result-shop-box h3 {
+  margin-bottom: 6px;
+}
+
+.result-shop-box p {
   margin-bottom: 12px;
-}
-
-.result-shop-grid {
-  display: grid;
-  gap: 12px;
-}
-
-.result-shop-item {
-  display: grid;
-  gap: 8px;
-}
-
-.result-shop-item strong {
+  color: var(--muted);
   font-size: 14px;
+}
+
+.result-shop-scroll {
+  width: 100%;
 }
 
 .affiliate-note {
