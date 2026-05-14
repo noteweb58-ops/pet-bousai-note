@@ -10,8 +10,8 @@ const products = [
   {
     id: "petWater",
     icon: "水",
-    name: "ペット用保存水",
-    description: "飲み水を別枠で確保。ウェットフードと組み合わせると水分補給を助けます。"
+    name: "保存水・飲み水",
+    description: "家族用とは別にペット分も確保。ウェットフードと組み合わせると水分補給を助けます。"
   },
   {
     id: "sheets",
@@ -187,7 +187,8 @@ function renderProducts() {
       const productLinks = links[product.id] || {};
       const shopLinks = [
         ["Amazon", productLinks.amazon],
-        ["楽天", productLinks.rakuten]
+        ["楽天", productLinks.rakuten],
+        ["公式", productLinks.official]
       ].filter(([, url]) => Boolean(url));
       return `
         <article class="product-card">
